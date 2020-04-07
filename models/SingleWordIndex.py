@@ -14,7 +14,7 @@ class SingleWordIndex:
 
     def fill_info(self, path):
 
-        for file in  self.__directory:
+        for file in self.__directory:
             # print(file)
             txt = open(path + "\\" + file, 'r', encoding="utf-8")
             for line in txt:
@@ -35,15 +35,12 @@ class SingleWordIndex:
 
             txt.close()
 
-
     def write_info(self, path):
         dict = open(path, "w", encoding="utf-8")
         for word in self.__inverted_indexes.keys():
             dict.write(
                 word + ", " + "%s" % self.__mat_incidence.get(word) + ", " + "%s\n" % self.__inverted_indexes.get(word))
         dict.close()
-
-
 
     @property
     def mat_incidence(self):
@@ -65,5 +62,3 @@ class SingleWordIndex:
 if __name__ == "__main__":
     diu = SingleWordIndex("D:/information-retrieval-project/res");
     diu.write_info("D:/information-retrieval-project/out/out.txt")
-
-

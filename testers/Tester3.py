@@ -1,4 +1,4 @@
-from models.PhraseFinder import find_phrase_by_biwords, find_phrase_by_words
+from models.PhraseSearchUtil import find_phrase_by_biwords, find_phrase_by_words
 from models.SingleWordIndex import SingleWordIndex
 
 from models.TwoWordIndex import TwoWordIndex
