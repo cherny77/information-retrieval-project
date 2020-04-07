@@ -61,4 +61,6 @@ class SingleWordIndex:
 
 if __name__ == "__main__":
     diu = SingleWordIndex("D:/information-retrieval-project/res");
+    for word in diu.inverted_indexes.keys():
+        print(diu.inverted_indexes[word].keys())
     diu.write_info("D:/information-retrieval-project/out/out.txt")
