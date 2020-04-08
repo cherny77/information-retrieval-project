@@ -58,4 +58,4 @@ def find_phrase_by_words(line, inverted_indexes, directory):
                     break
             if is_here:
                 res.update([file])
-    return res
+    return list(res)
